@@ -1,7 +1,11 @@
 #!/bin/bash
 
-chmod a+x  ansible_vm.sh vms_start.sh
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ANSIBLE_DIR="$ROOT_DIR/Ansible"
 
-source ./ansible_vm.sh
+chmod a+x "$ANSIBLE_DIR/ansible_vm.sh" "$ANSIBLE_DIR/vms_start.sh"
 
-$CSSH_CON  'bash -s' < vms_start.sh
+source "$ANSIBLE_DIR/ansible_vm.sh"
+
+
+ $CSSH_CON  'bash -s' < "$ANSIBLE_DIR/vms_start.sh"

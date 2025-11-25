@@ -10,7 +10,6 @@ cd ~/.ansible
 
 ansible-galaxy collection install community.general --force
 
-
 cat > ymlkurimas.yml << "BMW"
 - name: opennebula
   become: yes
@@ -39,8 +38,8 @@ cat > ymlkurimas.yml << "BMW"
     - name: webserver vm
       community.general.one_vm:
         api_url: "https://grid5.mif.vu.lt/cloud3/RPC2"
-        api_username: "openenbulauser2"
-        api_password: "opennebulapass2"
+        api_username: "joda0846"
+        api_password: "Joris123."
         template_name: "ubuntu-24.04"
         attributes:
           name: "webserver vm"
@@ -49,8 +48,8 @@ cat > ymlkurimas.yml << "BMW"
     - name: db vm
       community.general.one_vm:
         api_url: "https://grid5.mif.vu.lt/cloud3/RPC2"
-        api_username: "openenbulauser3"
-        api_password: "openenbulauser3"
+        api_username: "tili1267"
+        api_password: "Ltu120320#"
         template_name: "ubuntu-24.04"
         attributes:
           name: "db vm"
@@ -59,8 +58,8 @@ cat > ymlkurimas.yml << "BMW"
     - name: client vm
       community.general.one_vm:
         api_url: "https://grid5.mif.vu.lt/cloud3/RPC2"
-        api_username: "openenbulauser4"
-        api_password: "openenbulauser4"
+        api_username: "tili1267"
+        api_password: "Ltu120320#"
         template_name: "ubuntu-24.04"
         attributes:
           name: "client vm"
